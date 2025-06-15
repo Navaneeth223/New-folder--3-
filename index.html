@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Jar</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🫙 Memory Jar</h1>
+    <form id="memoryForm">
+      <textarea placeholder="Write a memory..." required></textarea>
+      
+      <label>
+        📸 Add Photo
+        <input type="file" accept="image/*"/>
+      </label>
+
+      <label>
+        🎙️ Record Voice
+        <button type="button" id="recordBtn">Start Recording</button>
+      </label>
+
+      <label>
+        ⏳ Unlock After
+        <select id="unlockTime">
+          <option value="1">1 Day</option>
+          <option value="7">1 Week</option>
+          <option value="30">1 Month</option>
+          <option value="365">1 Year</option>
+        </select>
+      </label>
+
+      <button type="submit">Lock Memory</button>
+    </form>
+
+    <div class="jar">
+      <div class="lid"></div>
+      <div class="content"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
